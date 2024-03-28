@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-03-28T18:45:00.026Z",
+    "end": "2024-03-28T18:45:06.527Z",
+    "duration": 6501,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "81f4ab12-8da7-4053-8b9c-f2e9fd7c6a43",
+      "title": "",
+      "fullFile": "cypress\\e2e\\agenda\\agenda.cy.js",
+      "file": "cypress\\e2e\\agenda\\agenda.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "42dee197-f2ee-41c6-86c2-7c7f67c711d9",
+          "title": "Testes funcionamento de agenda de contatos",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Adicionar contatos à agenda",
+              "fullTitle": "Testes funcionamento de agenda de contatos Adicionar contatos à agenda",
+              "timedOut": null,
+              "duration": 3761,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[placeholder = \"Nome\"]').type(\"thaisa mendes\");\ncy.get('input[placeholder = \"E-mail\"]').type(\"thata@gmail.com\");\ncy.get('input[placeholder = \"Telefone\"]').type(\"61-99999-8888\"), cy.get(\".adicionar\").click(), cy.get('input[placeholder = \"Nome\"]').type(\"Renato Alvs\"), cy.get('input[placeholder = \"E-mail\"]').type(\"rns@gmail.com\"), cy.get('input[placeholder = \"Telefone\"]').type(\"61-77777-6666\"), cy.get(\".adicionar\").click(), cy.get('input[placeholder = \"Nome\"]').type(\"Luiz Albrt\"), cy.get('input[placeholder = \"E-mail\"]').type(\"Luizi@gmal.com\"), cy.get('input[placeholder = \"Telefone\"]').type(\"61-12345-9874\"), cy.get(\".adicionar\").click();",
+              "err": {},
+              "uuid": "92ecff1e-c47d-473c-9065-fe1a8d36b20b",
+              "parentUUID": "42dee197-f2ee-41c6-86c2-7c7f67c711d9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deletar contato indesejado",
+              "fullTitle": "Testes funcionamento de agenda de contatos Deletar contato indesejado",
+              "timedOut": null,
+              "duration": 410,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.on(\"contato\", conteudo => {\n  expect(conteudo).contain(\"Renato Alvs\");\n  cy.get(\"delete\").click();\n});",
+              "err": {},
+              "uuid": "4f773c8f-15e7-4baa-85bb-270e9af8be16",
+              "parentUUID": "42dee197-f2ee-41c6-86c2-7c7f67c711d9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Alteração de um contato",
+              "fullTitle": "Testes funcionamento de agenda de contatos Alteração de um contato",
+              "timedOut": null,
+              "duration": 401,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.on(\"contato\", conteudo => {\n  expect(conteudo).contain(\"Luiz Albrt\");\n  cy.get(\"edit\").click();\n  cy.get('input[placeholder = \"Nome\"]').type(\"Luiz Alberto\"), cy.get('input[placeholder = \"E-mail\"]').type(\"Luiziho@gmail.com\"), cy.get('input[placeholder = \"Telefone\"]').type(\"61-12345-9876\"), cy.get(\"alterar\").click();\n});",
+              "err": {},
+              "uuid": "d17caf9b-5a1d-45ab-a290-71d230f9a43f",
+              "parentUUID": "42dee197-f2ee-41c6-86c2-7c7f67c711d9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "92ecff1e-c47d-473c-9065-fe1a8d36b20b",
+            "4f773c8f-15e7-4baa-85bb-270e9af8be16",
+            "d17caf9b-5a1d-45ab-a290-71d230f9a43f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4572,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/relatorio",
+        "overwrite": true,
+        "html": true,
+        "JSON": true,
+        "timestamp": "ddmmyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
